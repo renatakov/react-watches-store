@@ -20,6 +20,14 @@ header {
     justify-content: space-evenly;
 }
 
+button{
+    background-color: $btn-bg-color;
+    border: none;
+    color: $btn-color;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+}
+
 nav ul{
     display: flex;
     align-items: center;
@@ -45,18 +53,50 @@ nav ul{
         position: absolute;
         bottom: -20%;
         left: 1%;
-        width: 30px;
+        animation: underline .5s ease;
         height: 2px;
         background-color: $btn-bg-color;
     }
 
-    button{
-        background-color: $btn-bg-color;
-        border: none;
-        color: $btn-color;
-        border-radius: 3px;
-        padding: .5rem 1rem;
-    }
+
     
 
+}
+
+@keyframes underline {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 30px;
+    }
+}
+
+.home{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    .homeBlock{
+        flex: 1 1 auto;
+    }
+    img{
+        width: 50%;
+
+    }
+    h1{
+        font-size: 50px;
+    }
+    p{
+        color: $light-color;
+    }
+    aside{
+        flex: 0 1 10%;
+        p{
+            transform: rotate(-90deg);
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
+    
 }
