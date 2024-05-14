@@ -1,5 +1,5 @@
 $light-color: rgba(147, 147, 147, 1);
-$bold-color:rgba(0, 0, 0, 1);
+$bold-color: rgba(0, 0, 0, 1);
 $btn-bg-color: rgba(115, 92, 255, 1);
 $btn-color: rgba(255, 255, 255, 1);
 
@@ -20,34 +20,50 @@ header {
     justify-content: space-evenly;
 }
 
-button{
+button {
     background-color: $btn-bg-color;
     border: none;
     color: $btn-color;
     border-radius: 3px;
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+
 }
 
-nav ul{
+button:hover {
+    background-color: $btn-color;
+    color: $btn-bg-color;
+    box-shadow: 0px 2px 0px 0px $btn-bg-color;
+    transition: all .5s ease-in-out;
+}
+
+li {
+    list-style: none;
+
+}
+
+nav ul {
     display: flex;
     align-items: center;
 
     li,
     button {
         margin-left: 1rem;
-        
+
     }
-    li{
+
+    li {
         position: relative;
-        list-style: none;
         color: $light-color;
     }
-    li:hover{
+
+    li:hover {
         color: $bold-color;
         font-weight: bold;
-        
+
     }
-    li:hover::after{
+
+    li:hover::after {
         content: "";
         display: block;
         position: absolute;
@@ -59,44 +75,102 @@ nav ul{
     }
 
 
-    
+
 
 }
 
 @keyframes underline {
-    0%{
+    0% {
         width: 0px;
     }
-    100%{
+
+    100% {
         width: 30px;
     }
 }
 
-.home{
+.home {
     position: relative;
     display: flex;
     justify-content: space-evenly;
     margin: 1rem;
-    .homeBlock{
+
+    .homeBlock {
         flex: 1 1 auto;
     }
-    img{
+
+    .homeBlock_img {
         width: 50%;
+        animation: watch 1s ease-in-out;
 
     }
-    h1{
+
+    @keyframes watch {
+        0% {
+            transform: scale(0.3);
+        }
+    }
+
+    h1 {
         font-size: 50px;
+        animation: text .5s ease-in-out;
+        animation-delay: .1s;
     }
-    p{
-        color: $light-color;
+
+    @keyframes text {
+        0% {
+            transform: translateY(50px);
+        }
     }
-    aside{
+
+    .homeBlock {
+
+        p {
+            color: $light-color;
+            animation: text .5s ease-in-out;
+
+        }
+
+        button {
+            animation: text .5s ease-in-out;
+
+
+
+        }
+    }
+
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         flex: 0 1 10%;
-        p{
+
+        p {
             transform: rotate(-90deg);
             font-size: 20px;
             text-transform: uppercase;
+            color: $bold-color;
+        }
+
+        .home_socialList {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                border-radius: 50%;
+                background-color: $btn-color;
+                box-shadow: 0px 5px 10px 2px rgb(189, 189, 189);
+                width: 40%;
+                margin-top: .5rem;
+            }
+
+            li a img {
+                width: 100%;
+            }
+
+
         }
     }
-    
+
 }
