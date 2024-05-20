@@ -102,6 +102,8 @@ nav ul {
     .homeBlock_img {
         width: 50%;
         animation: watch 1s ease-in-out;
+        object-fit: contain;
+
 
     }
 
@@ -161,7 +163,7 @@ nav ul {
                 border-radius: 50%;
                 background-color: $btn-color;
                 box-shadow: 0px 5px 10px 2px rgb(189, 189, 189);
-                width: 40%;
+                width: 45%;
                 margin-top: .5rem;
             }
 
@@ -177,6 +179,7 @@ nav ul {
 
 .features {
     padding: 1rem;
+
     h2 {
         text-align: center;
         font-size: 42px;
@@ -191,16 +194,32 @@ nav ul {
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid rgba(55, 51, 63, 0.05);
-            border-radius: 50%;
-            width: 80%;
-            height: 80vh;
+            width: 40%;
+
+            >div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgba(55, 51, 63, 0.1);
+                border-radius: 50%;
+                width: 80%;
+                padding: 3rem;
+                >div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid rgba(55, 51, 63, 0.4);
+                    border-radius: 50%;
+                    width: 90%;
+                    padding: 2rem;
+                }
+            }
         }
 
         img {
             object-fit: scale-down;
             border: 1px solid;
-            padding: 0 3rem;
+            padding: 0 2rem;
             border-radius: 50%;
         }
 
