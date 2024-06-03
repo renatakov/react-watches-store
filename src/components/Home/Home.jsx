@@ -69,11 +69,8 @@ const Home = () => {
                         </div>
                     </div>
                     <div className={s.img_container}>
-
                         <div>
-
                             <div>
-
                                 <img src="https://corkerro.github.io/volumenzeit/img/features/watch.png" alt="" />
                             </div>
                         </div>
@@ -89,6 +86,41 @@ const Home = () => {
                             Instantaneous rate -10/ +20 sec/month<br />
                             Standard Battery life: 10 years</p>
                     </div>
+                </div>
+                <div className={s.watchDesign}>
+                    <h2>design your watch</h2>
+                    <div className={s.watchDesign__container}>
+                        <div className={s.watchDesign__container_item}>
+                        <div>
+                            <div>1</div>
+                            </div>
+                            <p>case color</p>
+                        </div>
+                        <hr />
+
+                        <div className={s.watchDesign__container_item}>
+                            <div>
+                            <div>2</div>
+                            </div>
+                            <p>dial design</p>
+                        </div>
+                        <hr />
+
+                        <div className={s.watchDesign__container_item}>
+                        <div>
+                            <div>3</div>
+                            </div>
+                            <p>dial color</p>
+                        </div>
+                        <hr />
+                        <div className={s.watchDesign__container_item}>
+                        <div>
+                            <div>4</div>
+                            </div>
+                            <p>strap design</p>
+                        </div>
+                    </div>
+                    <button>Design Your Watch</button>
                 </div>
             </section>
         </>

@@ -155,7 +155,7 @@ nav ul {
             color: $bold-color;
         }
 
-        .home_socialList {
+        &_socialList {
             display: flex;
             flex-direction: column;
 
@@ -172,6 +172,7 @@ nav ul {
             }
 
 
+
         }
     }
 
@@ -185,7 +186,7 @@ nav ul {
         font-size: 42px;
     }
 
-    .features__container {
+    &__container {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -236,5 +237,53 @@ nav ul {
             font-size: 12px;
         }
 
+    }
+}
+
+.watchDesign{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $btn-bg-color;
+    color: $btn-color;
+    text-transform: capitalize;
+    padding: 1rem;
+    
+    h2{
+        font-size: 300%;
+    }
+
+    hr{
+        margin: 0;
+        width: 20%;
+    }
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            div{
+                border: 1px solid #d4d4d4;
+                padding: 1rem;
+                border-radius: 50%;
+                div{
+                    font-size: 200%;
+                    border: 2px solid $btn-color;
+                    padding: .5rem 1.5rem;
+                    border-radius: 50%;
+                }
+            }
+            p{
+                font-size: 80%;
+            }
+        }
+    }
+    button{
+        background-color: $bold-color;
+        width: fit-content;
+        align-self: center;
     }
 }
