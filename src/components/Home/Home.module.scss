@@ -205,6 +205,7 @@ nav ul {
                 border-radius: 50%;
                 width: 80%;
                 padding: 3rem;
+
                 >div {
                     display: flex;
                     justify-content: center;
@@ -240,7 +241,7 @@ nav ul {
     }
 }
 
-.watchDesign{
+.watchDesign {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -248,42 +249,82 @@ nav ul {
     color: $btn-color;
     text-transform: capitalize;
     padding: 1rem;
-    
-    h2{
+
+    h2 {
         font-size: 300%;
     }
 
-    hr{
+    hr {
         margin: 0;
         width: 20%;
     }
-    &__container{
+
+    &__container {
         display: flex;
         justify-content: center;
         align-items: center;
-        &_item{
+
+        &_item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            div{
+
+            div {
                 border: 1px solid #d4d4d4;
                 padding: 1rem;
                 border-radius: 50%;
-                div{
+
+                div {
                     font-size: 200%;
                     border: 2px solid $btn-color;
                     padding: .5rem 1.5rem;
                     border-radius: 50%;
                 }
             }
-            p{
+
+            p {
                 font-size: 80%;
             }
         }
     }
-    button{
+
+    button {
         background-color: $bold-color;
         width: fit-content;
         align-self: center;
+    }
+}
+
+.mission {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bold-color;
+    margin-top: 1rem;
+
+    img {
+        width: 30vw;
+        mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent);
+        object-fit: contain;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: space-between;
+        flex: 0 1 30%;
+        color: $btn-color;
+
+        h2 {
+            font-size: 300%;
+            text-transform: capitalize;
+        }
+
+        p {
+
+            text-align: center;
+            color: #ffffffc5;
+        }
     }
 }

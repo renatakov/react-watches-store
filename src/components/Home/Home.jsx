@@ -91,8 +91,8 @@ const Home = () => {
                     <h2>design your watch</h2>
                     <div className={s.watchDesign__container}>
                         <div className={s.watchDesign__container_item}>
-                        <div>
-                            <div>1</div>
+                            <div>
+                                <div>1</div>
                             </div>
                             <p>case color</p>
                         </div>
@@ -100,27 +100,38 @@ const Home = () => {
 
                         <div className={s.watchDesign__container_item}>
                             <div>
-                            <div>2</div>
+                                <div>2</div>
                             </div>
                             <p>dial design</p>
                         </div>
                         <hr />
 
                         <div className={s.watchDesign__container_item}>
-                        <div>
-                            <div>3</div>
+                            <div>
+                                <div>3</div>
                             </div>
                             <p>dial color</p>
                         </div>
                         <hr />
                         <div className={s.watchDesign__container_item}>
-                        <div>
-                            <div>4</div>
+                            <div>
+                                <div>4</div>
                             </div>
                             <p>strap design</p>
                         </div>
                     </div>
                     <button>Design Your Watch</button>
+                </div>
+                <div className={s.mission}>
+                    <div className={s.mission__info}>
+                        <h2>our mission</h2>
+                        <p>We have invested 6 year of our lifes to invent a new technology of production a 3D dials with quality of wristwatch industry.
+                            All what we need to turn on our imagination on maximum.
+
+                            We love Out-of-the-box designs and believe there are many people who thinks the same.</p>
+                        <button>Design Your Watch</button>
+                    </div>
+                    <img src="https://s3-alpha-sig.figma.com/img/b44c/a747/702e0fe49fea979a1fb9299684156eb2?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TdO7ofhx~jzUOfN-q~C~BUVg4v4DmKugdQorqlZIp20m6z9ezOXVi8bgx9VbmiUM38od7MLy1DbrqeY9IkbCPS1mzQtsdDcVC37I67VWjh~Luwes68QgSH7cVmCQsyJcBLojc5MEHO7mvNrhUvVVJQvC4f9tT03icwWYGPPzlPJT3x9SEslJOBQ00q~BpldWzPf6DrACghx8XcRyac7u2Y6wp3gp38KhyhiAndm7FHRet~UTwuLXjSyGrdWfc08U1VF23IRASvKR8stvpXdJ9I69~XrSZbvF8bIWUF6-eB21y1kLsJq5rb62FfCGMubL9ybaE37Q0yC3I1FLvmgr0A__" alt="" />
                 </div>
             </section>
         </>
