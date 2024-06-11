@@ -1,6 +1,36 @@
 import s from "./Home.module.scss"
-
+import { useSelector } from "react-redux";
+import ProductsItem from "../Products/ProductsItem/ProductsItem"
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 const Home = () => {
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    }
+    const state = useSelector(state => state.products)
+    console.log(state);
+    const WatchesCollection = state.watches.map((item, i) => {
+        return <ProductsItem
+            key={`id-${i}`}
+            model={item.model}
+            price={item.price}
+        />
+    })
     return (
         <>
 
@@ -132,6 +162,15 @@ const Home = () => {
                         <button>Design Your Watch</button>
                     </div>
                     <img src="https://s3-alpha-sig.figma.com/img/b44c/a747/702e0fe49fea979a1fb9299684156eb2?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TdO7ofhx~jzUOfN-q~C~BUVg4v4DmKugdQorqlZIp20m6z9ezOXVi8bgx9VbmiUM38od7MLy1DbrqeY9IkbCPS1mzQtsdDcVC37I67VWjh~Luwes68QgSH7cVmCQsyJcBLojc5MEHO7mvNrhUvVVJQvC4f9tT03icwWYGPPzlPJT3x9SEslJOBQ00q~BpldWzPf6DrACghx8XcRyac7u2Y6wp3gp38KhyhiAndm7FHRet~UTwuLXjSyGrdWfc08U1VF23IRASvKR8stvpXdJ9I69~XrSZbvF8bIWUF6-eB21y1kLsJq5rb62FfCGMubL9ybaE37Q0yC3I1FLvmgr0A__" alt="" />
+                </div>
+                <div className={s.watches}>
+                    <h2>WATCHES</h2>
+                    <p>Volumenzeit gives you a total of 48 style combinations with 4 dial types, 4 dial colors, 3 case colors, multiple stylish strap combinations, and customized engraving options.</p>
+                    <div className={s.watches__slider_container}>
+                        {/* <Carousel showDots={false} responsive={responsive}> */}
+                            {WatchesCollection}
+                        {/* </Carousel> */}
+                    </div>
                 </div>
             </section>
         </>
