@@ -10,7 +10,8 @@ const initialState = {
             caseSize: "40mm",
             strapMaterial: "Stainless Steel",
             waterResistance: "300m",
-            movementType: "Automatic"
+            movementType: "Automatic",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-1.png'
         },
         {
             brand: "Omega",
@@ -20,7 +21,9 @@ const initialState = {
             caseSize: "42mm",
             strapMaterial: "Stainless Steel",
             waterResistance: "50m",
-            movementType: "Manual"
+            movementType: "Manual",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-2.png'
+
         },
         {
             brand: "Tag Heuer",
@@ -30,7 +33,9 @@ const initialState = {
             caseSize: "41mm",
             strapMaterial: "Leather",
             waterResistance: "100m",
-            movementType: "Automatic"
+            movementType: "Automatic",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-3.png'
+
         },
         {
             brand: "Breitling",
@@ -40,7 +45,9 @@ const initialState = {
             caseSize: "43mm",
             strapMaterial: "Stainless Steel",
             waterResistance: "30m",
-            movementType: "Automatic"
+            movementType: "Automatic",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-2.png'
+
         },
         {
             brand: "Seiko",
@@ -50,7 +57,9 @@ const initialState = {
             caseSize: "44mm",
             strapMaterial: "Rubber",
             waterResistance: "200m",
-            movementType: "Automatic"
+            movementType: "Automatic",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-1.png'
+
         },
         {
             brand: "Casio",
@@ -60,7 +69,9 @@ const initialState = {
             caseSize: "48mm",
             strapMaterial: "Resin",
             waterResistance: "200m",
-            movementType: "Quartz"
+            movementType: "Quartz",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-3.png'
+
         },
         {
             brand: "Patek Philippe",
@@ -70,7 +81,9 @@ const initialState = {
             caseSize: "40mm",
             strapMaterial: "Stainless Steel",
             waterResistance: "120m",
-            movementType: "Automatic"
+            movementType: "Automatic",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-1.png'
+
         },
         {
             brand: "Audemars Piguet",
@@ -80,7 +93,9 @@ const initialState = {
             caseSize: "41mm",
             strapMaterial: "Stainless Steel",
             waterResistance: "50m",
-            movementType: "Automatic"
+            movementType: "Automatic",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-2.png'
+
         },
         {
             brand: "Tissot",
@@ -90,7 +105,9 @@ const initialState = {
             caseSize: "39mm",
             strapMaterial: "Leather",
             waterResistance: "30m",
-            movementType: "Automatic"
+            movementType: "Automatic",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-3.png'
+
         },
         {
             brand: "Fossil",
@@ -100,7 +117,9 @@ const initialState = {
             caseSize: "44mm",
             strapMaterial: "Silicone",
             waterResistance: "30m",
-            movementType: "Quartz"
+            movementType: "Quartz",
+            img: 'https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-2.png'
+
         }
     ]
 }

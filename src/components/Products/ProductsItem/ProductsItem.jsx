@@ -5,7 +5,7 @@ const ProductsItem = (props) => {
         <div className={s.productsItem}>
             <div className={s.imgContainer}>
 
-            <img src="https://corkerro.github.io/volumenzeit/img/watches/Volumenzeit_S-1.png" alt="" />
+            <img className="d-block w-100" src={props.img} alt="" />
             </div>
             <p>{props.model}</p>
             <span>${props.price}</span>

@@ -1,35 +1,23 @@
 import s from "./Home.module.scss"
 import { useSelector } from "react-redux";
 import ProductsItem from "../Products/ProductsItem/ProductsItem"
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { Carousel } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Home = () => {
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
-    }
     const state = useSelector(state => state.products)
     console.log(state);
     const WatchesCollection = state.watches.map((item, i) => {
-        return <ProductsItem
-            key={`id-${i}`}
-            model={item.model}
-            price={item.price}
-        />
+        return (
+        <Carousel.Item> 
+
+            <ProductsItem
+                key={`id-${i}`}
+                model={item.model}
+                price={item.price}
+                img={item.img}
+            />
+        </Carousel.Item>
+    )
     })
     return (
         <>
@@ -47,6 +35,11 @@ const Home = () => {
                         <button>Sign Up</button>
                     </ul>
                 </nav>
+                <div className={s.menu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </header>
             <section className={s.home}>
                 <aside>
@@ -166,11 +159,23 @@ const Home = () => {
                 <div className={s.watches}>
                     <h2>WATCHES</h2>
                     <p>Volumenzeit gives you a total of 48 style combinations with 4 dial types, 4 dial colors, 3 case colors, multiple stylish strap combinations, and customized engraving options.</p>
-                    <div className={s.watches__slider_container}>
-                        {/* <Carousel showDots={false} responsive={responsive}> */}
-                            {WatchesCollection}
-                        {/* </Carousel> */}
+                    
+                        <Carousel data-bs-theme="dark" indicators={false} wrap={true}>
+                        {WatchesCollection}
+                        </Carousel>
+                        
+                    
+                </div>
+                <div className={s.about}>
+                    <div className={s.about__info}>
+                    <h2>about us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan volutpat tristique metus, nibh massa quam iaculis lectus. A dui nam phasellus porttitor nisi. Eget a quam est, eget dictum nisi. Sit donec aenean vivamus sagittis, blandit. Eleifend bibendum aliquet orci risus, velit. Lectus tellus amet</p>
                     </div>
+                    <div className={s.about__video}>
+                    <button>Watch Video</button>
+                    </div>
+                    {/* <iframe poster width="560" height="315" src="https://www.youtube.com/embed/s-x_HVCwKgI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
                 </div>
             </section>
         </>
