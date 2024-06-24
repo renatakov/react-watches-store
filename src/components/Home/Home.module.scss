@@ -11,6 +11,7 @@ $btn-color: rgba(255, 255, 255, 1);
 
 
 body {
+    padding: 1rem;
     background: rgba(249, 250, 254, 1);
 }
 
@@ -18,11 +19,25 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    .menu{
+    padding: 1rem;
+
+    nav {
         display: flex;
+        align-items: center;
+
+        button {
+            font-size: 1rem;
+            margin-left: 1rem;
+            padding: .5rem 1rem;
+        }
+    }
+
+    .menu {
+        display: none;
         flex-direction: column;
         gap: 5px;
-        span{
+
+        span {
             background-color: $btn-bg-color;
             width: 2rem;
             height: 4px;
@@ -53,6 +68,8 @@ li {
 
 }
 
+
+
 nav ul {
     display: flex;
     align-items: center;
@@ -64,6 +81,7 @@ nav ul {
     }
 
     li {
+        // font-size: 1rem;
         position: relative;
         color: $light-color;
     }
@@ -108,8 +126,7 @@ nav ul {
     }
 
     .homeBlock_img {
-        max-width: 100%;
-        width: 50%;
+        width: 40vw;
         animation: watch 1s ease-in-out;
         object-fit: contain;
 
@@ -123,7 +140,7 @@ nav ul {
     }
 
     h1 {
-        font-size: 50px;
+        font-size: 3rem;
         animation: text .5s ease-in-out;
         animation-delay: .1s;
     }
@@ -159,7 +176,7 @@ nav ul {
 
         p {
             transform: rotate(-90deg);
-            font-size: 20px;
+            font-size: 1.2rem;
             text-transform: uppercase;
             color: $bold-color;
         }
@@ -187,6 +204,7 @@ nav ul {
     }
 
 }
+
 
 
 .features {
@@ -275,7 +293,7 @@ nav ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
 
         &_item {
             display: flex;
@@ -318,18 +336,17 @@ nav ul {
     margin-top: 1rem;
 
     img {
-        width: 30vw;
+        width: 40%;
         max-width: 100%;
         mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent);
-        object-fit: contain;
     }
 
     &__info {
+        flex: 0 1 30%;
         display: flex;
         flex-direction: column;
         align-items: center;
         align-content: space-between;
-        flex: 0 1 30%;
         color: $btn-color;
 
         h2 {
@@ -345,8 +362,8 @@ nav ul {
     }
 }
 
-.watches{
-    p{
+.watches {
+    p {
         text-align: center;
     }
 }
@@ -358,7 +375,6 @@ nav ul {
     flex-wrap: wrap;
 
     &__info {
-
         flex: 0 1 30%;
 
         h2 {
@@ -366,29 +382,87 @@ nav ul {
             text-transform: uppercase;
         }
 
-        p{
+        p {
             color: $light-color;
         }
     }
 
     &__video {
         flex: 0 1 30%;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url("https://corkerro.github.io/volumenzeit/img/about/video.png") no-repeat ;
-        width: 100%;
+        background: url("https://corkerro.github.io/volumenzeit/img/about/video.png") no-repeat center;
+        // width: 100%;
     }
 }
 
+@media (min-width: 768px) and (max-width: 900px) {
+    * {
 
-@media screen  and (max-width: 430px) {
-    *{
-
-        font-size: 14px;
+        font-size: 13px;
     }
 
-    nav{
+    header {
+
+        nav ul button{
+
+            padding: 4px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    * {
+
+        font-size: 13px;
+    }
+
+    nav ul {
         display: none;
+    }
+
+    header {
+
+        .menu {
+            display: flex;
+        }
+    }
+
+    .homeBlock_img {
+        display: none;
+    }
+
+    .mission {
+        row-gap: .5rem;
+
+        img {
+            width: 100%;
+        }
+
+        &__info {
+            flex: 1 1 100%;
+        }
+    }
+
+    .about {
+        &__info {
+            flex: 0 1 100%;
+            text-align: center;
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+        &__video {
+            background: none;
+            width: 100%;
+
+            button{
+                padding: .8rem;
+            }
+        }
     }
 }

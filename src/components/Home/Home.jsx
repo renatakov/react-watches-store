@@ -2,22 +2,25 @@ import s from "./Home.module.scss"
 import { useSelector } from "react-redux";
 import ProductsItem from "../Products/ProductsItem/ProductsItem"
 import { Carousel } from "react-bootstrap";
+import MyVerticallyCenteredModal from "../../assets/Modal/Modal";
+import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 const Home = () => {
+    const [modalShow, setModalShow] = useState(false);
     const state = useSelector(state => state.products)
     console.log(state);
     const WatchesCollection = state.watches.map((item, i) => {
         return (
-        <Carousel.Item> 
+            <Carousel.Item>
 
-            <ProductsItem
-                key={`id-${i}`}
-                model={item.model}
-                price={item.price}
-                img={item.img}
-            />
-        </Carousel.Item>
-    )
+                <ProductsItem
+                    key={`id-${i}`}
+                    model={item.model}
+                    price={item.price}
+                    img={item.img}
+                />
+            </Carousel.Item>
+        )
     })
     return (
         <>
@@ -159,22 +162,26 @@ const Home = () => {
                 <div className={s.watches}>
                     <h2>WATCHES</h2>
                     <p>Volumenzeit gives you a total of 48 style combinations with 4 dial types, 4 dial colors, 3 case colors, multiple stylish strap combinations, and customized engraving options.</p>
-                    
-                        <Carousel data-bs-theme="dark" indicators={false} wrap={true}>
+
+                    <Carousel data-bs-theme="dark" indicators={false} wrap={true}>
                         {WatchesCollection}
-                        </Carousel>
-                        
-                    
+                    </Carousel>
+
+
                 </div>
                 <div className={s.about}>
                     <div className={s.about__info}>
-                    <h2>about us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan volutpat tristique metus, nibh massa quam iaculis lectus. A dui nam phasellus porttitor nisi. Eget a quam est, eget dictum nisi. Sit donec aenean vivamus sagittis, blandit. Eleifend bibendum aliquet orci risus, velit. Lectus tellus amet</p>
+                        <h2>about us</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan volutpat tristique metus, nibh massa quam iaculis lectus. A dui nam phasellus porttitor nisi. Eget a quam est, eget dictum nisi. Sit donec aenean vivamus sagittis, blandit. Eleifend bibendum aliquet orci risus, velit. Lectus tellus amet</p>
                     </div>
                     <div className={s.about__video}>
-                    <button>Watch Video</button>
+                        <button onClick={() => setModalShow(true)}>Watch Video</button>
+                        <MyVerticallyCenteredModal
+                            show={modalShow}
+                            onHide={() => setModalShow(false)}
+                        />
                     </div>
-                    {/* <iframe poster width="560" height="315" src="https://www.youtube.com/embed/s-x_HVCwKgI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                    
 
                 </div>
             </section>
