@@ -181,9 +181,23 @@ const Home = () => {
                             onHide={() => setModalShow(false)}
                         />
                     </div>
-                    
+
 
                 </div>
+                <div className={s.newsletter}>
+                    <h2>Don't miss your chance to get free Giveaway <br/>Sing up to our newsletter</h2>
+                    <p>We will inform you about coming Giveaways, Offers, Online Store preparation progress and start of sales</p>
+                    <form className={s.newsletter__form}>
+
+                        <input type="text" id="" placeholder="Name" />
+                        <input type="email" id="" placeholder="Email"/>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+                <footer>
+                    <img src="https://corkerro.github.io/volumenzeit/img/logo.svg" alt="" />
+                    <p>© Copyright 2022 wolumenzeit - All rights reserved.</p>
+                </footer>
             </section>
         </>
 
