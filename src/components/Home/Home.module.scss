@@ -11,7 +11,7 @@ $btn-color: rgba(255, 255, 255, 1);
 
 
 body {
-    padding: 1rem;
+    padding: 0 1rem;
     background: rgba(249, 250, 254, 1);
 }
 
@@ -30,18 +30,133 @@ header {
             margin-left: 1rem;
             padding: .5rem 1rem;
         }
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            li,
+            button {
+                margin-left: 1rem;
+
+            }
+
+            li {
+                position: relative;
+                color: $light-color;
+            }
+
+            li:hover {
+                color: $bold-color;
+                font-weight: bold;
+
+            }
+
+            li:hover::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -20%;
+                left: 1%;
+                animation: underline .5s ease;
+                height: 2px;
+                background-color: $btn-bg-color;
+            }
+        }
+
     }
 
     .menu {
+        position: relative;
         display: none;
         flex-direction: column;
         gap: 5px;
+
+        input {
+            position: absolute;
+            top: 30%;
+            left: 25%;
+            opacity: 0;
+        }
+
+        input:checked~span:nth-child(2) {
+            position: absolute;
+            top: -11%;
+            left: 0%;
+            transform: rotate(45deg);
+        }
+
+        input:checked~span:nth-child(3) {
+            display: none;
+        }
+
+        input:checked~span:last-child {
+            transform: rotate(-45deg);
+        }
 
         span {
             background-color: $btn-bg-color;
             width: 2rem;
             height: 4px;
         }
+    }
+}
+
+
+.menuList {
+    display: none;
+    background-color: $btn-color;
+    height: 100vh;
+
+    nav {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            align-items: center;
+
+            button {
+
+                svg{
+                    margin-right: .5rem;
+                }
+
+                padding: .5rem;
+                font-size: 1.7rem;
+
+                width: 100%;
+            }
+
+            li {
+                font-size: 1.7rem;
+                position: relative;
+                color: $light-color;
+            }
+
+            li:hover {
+                color: $bold-color;
+                font-weight: bold;
+
+            }
+
+            li:hover::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -20%;
+                left: 1%;
+                animation: underline .5s ease;
+                height: 2px;
+                background-color: $btn-bg-color;
+            }
+        }
+    }
+
+    &.open {
+        display: flex;
+        justify-content: center;
+
+
     }
 }
 
@@ -70,40 +185,7 @@ li {
 
 
 
-nav ul {
-    display: flex;
-    align-items: center;
 
-    li,
-    button {
-        margin-left: 1rem;
-
-    }
-
-    li {
-        // font-size: 1rem;
-        position: relative;
-        color: $light-color;
-    }
-
-    li:hover {
-        color: $bold-color;
-        font-weight: bold;
-
-    }
-
-    li:hover::after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -20%;
-        left: 1%;
-        animation: underline .5s ease;
-        height: 2px;
-        background-color: $btn-bg-color;
-    }
-
-}
 
 @keyframes underline {
     0% {
@@ -443,16 +525,18 @@ nav ul {
 
 }
 
-footer{
+footer {
     margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    p{
+
+    p {
         color: rgb(195, 188, 188);
     }
-    img{
+
+    img {
         width: 40vw;
         object-fit: contain;
     }
@@ -479,16 +563,23 @@ footer{
         font-size: 13px;
     }
 
-    nav ul {
-        display: none;
-    }
-
     header {
+        justify-content: space-between;
+
+        img {
+            width: 50%;
+        }
+
+        nav ul {
+            display: none;
+        }
 
         .menu {
             display: flex;
+
         }
     }
+
 
     .homeBlock_img {
         display: none;
