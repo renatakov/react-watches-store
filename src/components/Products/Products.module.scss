@@ -1,0 +1,13 @@
+$light-color: rgba(147, 147, 147, 1);
+$bold-color: rgba(0, 0, 0, 1);
+$btn-bg-color: rgba(115, 92, 255, 1);
+$btn-color: rgba(255, 255, 255, 1);
+
+.products__info{
+    background-color: $btn-bg-color;
+    color: $btn-color;
+
+    h1{
+        text-transform: uppercase;
+    }
+}
